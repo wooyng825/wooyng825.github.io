@@ -1,15 +1,20 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-    {% include head.html %}
+{% include blog-banner.html %}
 
-    <body>
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
 
-        {% include header.html %}
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
 
-        
-
-        {% include footer.html %}
-
-    </body>
-</html>
+{% include paginator.html %}

@@ -39,6 +39,12 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+
+# Outputting
+paginate: 8
+paginate_path: /page:num
+
+
 # Build settings
 plugins:
   - jekyll-feed
