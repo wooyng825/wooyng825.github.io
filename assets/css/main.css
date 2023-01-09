@@ -235,6 +235,7 @@ input, select, textarea {
 		text-align: right;
 	}
 
+
 /* Loader */
 
 	@-moz-keyframes spinner-show {
@@ -3378,12 +3379,21 @@ input, select, textarea {
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 		cursor: default;
 		height: 3.5em;
+		top: 0;
 		left: 0;
 		line-height: 3.5em;
 		position: fixed;
-		top: 0;
 		width: 100%;
 		z-index: 100;
+		transition: top 0.2s;
+	}
+
+	#header {
+		top: -6rem;
+	}
+
+	#header.show {
+		top: 0;
 	}
 
 		#header h1 {
@@ -3441,11 +3451,11 @@ input, select, textarea {
 		padding-top: 0;
 	}
 
-	body.landing #header {
+	/* body.landing #header {
 		background: transparent;
 		box-shadow: none;
-		position: absolute;
-	}
+		position: ;
+	} */
 
 /* Banner */
 

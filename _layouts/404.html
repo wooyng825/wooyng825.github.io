@@ -5,13 +5,21 @@
 
     <body>
 
+      {% include header.html %}
+
         <style type="text/css" media="screen">
             .container {
-              margin: 10px auto;
-              max-width: 600px;
               text-align: center;
             }
-            h1 {
+
+            .contain-content {
+              top: 50%;
+              left: 50%;
+              position: absolute;
+              transform: translate(-50%, -50%);
+            }
+
+            span {
               margin: 30px 0;
               font-size: 4em;
               line-height: 1;
@@ -20,10 +28,12 @@
           </style>
           
           <div class="container">
-            <h1>404</h1>
-          
-            <p><strong>Page not found :(</strong></p>
-            <p>The requested page could not be found.</p>
+            <div class="contain-content">
+              <span>404</span>
+              <p><strong>Page not found</strong></p>
+              <p>페이지를 찾을 수 없습니다. <br />
+                메뉴를 통해 다른 페이지로 이동할 수 있습니다.</p>
+            </div>
           </div>
 
     </body>
