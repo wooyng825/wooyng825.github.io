@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <style type="text/css" media="screen">
+      .container {
+        text-align: center;
+      }
+  
+      .contain-content {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+  
+      span {
+        margin: 30px 0;
+        font-size: 4em;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+  </style>
     
-    {% include head.html %}
+  <div class="container">
+    <div class="contain-content">
+      <span>404</span>
+      <p><strong>Page not found</strong></p>
+      <p>페이지를 찾을 수 없습니다. <br />
+        메뉴를 통해 다른 페이지로 이동할 수 있습니다.</p>
+    </div>
+  </div>
 
-    <body>
+  {% include scripts.html %}
 
-      {% include header.html %}
-
-        <style type="text/css" media="screen">
-            .container {
-              text-align: center;
-            }
-
-            .contain-content {
-              top: 50%;
-              left: 50%;
-              position: absolute;
-              transform: translate(-50%, -50%);
-            }
-
-            span {
-              margin: 30px 0;
-              font-size: 4em;
-              line-height: 1;
-              letter-spacing: -1px;
-            }
-          </style>
-          
-          <div class="container">
-            <div class="contain-content">
-              <span>404</span>
-              <p><strong>Page not found</strong></p>
-              <p>페이지를 찾을 수 없습니다. <br />
-                메뉴를 통해 다른 페이지로 이동할 수 있습니다.</p>
-            </div>
-          </div>
-
-    </body>
+  </body>
 </html>
 
