@@ -1,5 +1,5 @@
 <head>
-    <title>Landed by HTML5 UP</title>
+    <title>{{ page.title }} | {{ site.title }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -16,6 +16,22 @@
     gtag('js', new Date());
 
     gtag('config', '{{ site.analytics.google.tracking_id }}');
+    </script>
+
+    <!-- Maker-Widget -->
+    <script>
+        (function(d, h, m){
+            var js, fjs = d.getElementsByTagName(h)[0];
+            if (d.getElementById(m)){return;}
+            js = d.createElement(h); js.id = m;
+            js.onload = function(){
+                window.makerWidgetComInit({
+                position: "left",          
+                widget: "yokv5yznjip0qo6e-5ghwlwujnr8bzlrq-lldsyldlfjztk3vd"                
+            })};
+            js.src = "https://makerwidget.com/js/embed.js";
+            fjs.parentNode.insertBefore(js, fjs)
+        }(document, "script", "dhm"))
     </script>
 </head>
 
