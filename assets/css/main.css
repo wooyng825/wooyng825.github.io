@@ -3385,11 +3385,11 @@ input, select, textarea {
 		position: fixed;
 		width: 100%;
 		z-index: 100;
-		transition: top 0.2s;
 	}
 
 	#header {
 		top: -6rem;
+		transition: top 0.15s;
 	}
 
 	#header.show {
@@ -3450,12 +3450,6 @@ input, select, textarea {
 	body.landing #page-wrapper {
 		padding-top: 0;
 	}
-
-	/* body.landing #header {
-		background: transparent;
-		box-shadow: none;
-		position: ;
-	} */
 
 /* Banner */
 

@@ -14,6 +14,9 @@ setInterval(function(){
         hasScrolled();
         didScroll = false;
     }
+    if (lastScrollTop == 0){
+        fixBox.classList.add('show');
+    }
 }, 250);
 
 function hasScrolled(){
