@@ -1,11 +1,28 @@
-<!-- Banner -->
-<section id="banner">
-    <div class="content">
-        <header>
-            <h2>Whatever it takes.</h2>
-            <p>{{ site.subtitle }}</p>
-        </header>
-        <span class="image"><img src="images/banner.jpg" alt="" /></span>
-    </div>
-    <a href="#one" class="goto-next scrolly">Next</a>
-</section>
+<!-- Home-banner -->
+{% if page.layout == 'home' %}
+    <section id="banner">
+        <div class="content">
+            <header>
+                <h2>Whatever it takes.</h2>
+                <p>{{ site.subtitle }}</p>
+            </header>
+            <span class="image"><img src="images/banner.jpg" alt="" /></span>
+        </div>
+        <a href="#one" class="goto-next scrolly">Next</a>
+    </section>
+
+{% else %}
+
+<!-- Default-banner -->
+    <section id="banner">
+        <div class="content" style="text-align: center">
+            <header class="major">
+                <h2>{{ page.title }}</h2>
+                <p>{{ page.subtitle }}</p>
+            </header>
+            <p>{{ page.description }}</p>
+        </div>
+        <a href="#" class="goto-next scrolly">Next</a>
+    </section>
+
+{% endif %}
