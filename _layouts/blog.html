@@ -4,17 +4,24 @@ layout: default
 
 {% include banner.html %}
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
+{% assign posts = site.posts | default: 0 %}
+{% assign index = 1 %}
+{% assign date_format = site.date_format %}
+
+<section id="one" class="post-list">
+  {% if posts == 0 %}
+    <p style="text-align: center; font-weight: bold; font-size: 2rem">업로드를 기다려주세요..!</p>
+    {% include newsletter.html %}
+  {% endif %}
   {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
+    <div id="post-{{ index }}" class="post-items">
+      <header class="post-title">
+        <span class="spread-underline">{{ post.title }}</span>
+      </header>
+      <p class="post-date"><i class="fa-regular fa-calendar-days"></i> &nbsp; {{ post.date | date: date_format }}</p>
+      <p class="post-excerpt">{{ post.title }}</p>
+    </div>
+    {% assign index = index | plus: 1 %}
   {% endfor %}
-</div>
-
-{% include paginator.html %}
+</section>

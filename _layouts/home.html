@@ -131,19 +131,6 @@ layout: default
 	</section>
 
 <!-- Newsletter -->
-	<section id="newsletter" class="wrapper style2 special fade">
-		<div class="container">
-			<header>
-				<h2>Newsletter</h2>
-				<p>새로운 소식을 받아보길 원하신다면 이메일을 입력해주세요.</p>
-			</header>
-			<form method="post" action="#" class="cta">
-				<div class="row gtr-uniform gtr-50">
-					<div class="col-8 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Your Email-Address" /></div>
-					<div class="col-4 col-12-xsmall"><input type="submit" value="소식 받아보기" class="fit primary" /></div>
-				</div>
-			</form>
-		</div>
-	</section>
+	{% include newsletter.html %}
 
 </div>
