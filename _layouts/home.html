@@ -5,6 +5,17 @@ layout: default
 
 {% include banner.html %}
 
+<!-- subtitle 추출하기 -->
+{% for page in site.pages %}
+	{% if page.layout == 'about' %}
+		{% assign about = page.subtitle %}
+	{% elsif page.layout == 'blog' %}
+		{% assign blog = page.subtitle %}
+	{% elsif page.layout == 'portfolio' %}
+		{% assign portfolio = page.subtitle %}
+	{% endif %}
+{% endfor %}
+
 <!-- One -->
 	<section id="one" class="spotlight style1 bottom">
 		<span class="image fit main"><img src="images/home.png" alt="" /></span>
@@ -43,11 +54,11 @@ layout: default
 		<div class="content">
 			<header>
 				<h2>About</h2>
-				<p>나를 기록하기</p>
+				<p>{{ about }}</p>
 			</header>
 			<p></p>
 			<ul class="actions">
-				<li><a href="#" class="button">Learn More</a></li>
+				<li><a href="{{ site.url }}/about" class="button">Learn More</a></li>
 			</ul>
 		</div>
 		<a href="#three" class="goto-next scrolly">Next</a>
@@ -59,7 +70,7 @@ layout: default
 		<div class="content">
 			<header>
 				<h2>Blog</h2>
-				<p>관심사 기록하기</p>
+				<p>{{ blog }}</p>
 			</header>
 			<p>평소 관심있었던 주제에 대한 나의 시선.</p>
 			<ul class="actions">
@@ -76,7 +87,7 @@ layout: default
 		<div class="container">
 			<header class="major">
 				<h2>Portfolio</h2>
-				<p>꿈을 기념하기</p>
+				<p>{{ portfolio }}</p>
 			</header>
 			<div class="box alt">
 				<div class="row gtr-uniform">
