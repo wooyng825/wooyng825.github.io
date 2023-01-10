@@ -4113,3 +4113,73 @@ input, select, textarea {
 					}
 
 	}
+
+
+
+/* click to top + progress-dial*/
+
+.gotop {
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	bottom: 45px;
+	right: 45px;
+	font-weight: bold;
+	color: #ffffff !important;
+	border-radius: 50%;
+	background: #333333;
+	font: normal 16px "InkLipquid";
+	transition: all .8s;	
+	cursor: pointer;
+	-webkit-transition: all .8s;
+	-moz-transition: all .8s;
+	-o-transition: all .8s;
+}
+.gotop:hover {
+	animation: btn-top 3s infinite;
+	background: #ffffff !important;
+	font-weight: bold;
+}
+@keyframes btn-top {
+	0% {transform: scale(1);}
+	25% {transform: scale(.8);}
+	50% {transform: scale(1.1);}
+	75% {transform: scale(.8);}
+	100% {transform: scale(1);}
+}
+.progress-circle {
+	width: 70px !important;
+	height: 70px !important;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	display: flex;
+	text-align: center;
+	visibility: hidden;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+
+.is-visible {
+	z-index: 100;
+	visibility: visible;
+	opacity: 1;
+}
+
+.top-btn {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 50px;
+	color: #ffffff;
+	right: 10px;
+	top: 8px;
+	border-bottom: none;
+}
+
+.top-btn:hover{
+	color: #ff0000;
+	font-weight: bold;
+}
