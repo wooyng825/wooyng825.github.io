@@ -41,12 +41,12 @@ $(document).ready(function() {
 
 
 const arrow = document.getElementById('top-btn');
-const bg = document.getElementById('gotop');
+const gotop = document.getElementById('gotop');
 
-bg.addEventListener("mouseover", (event) => {
+gotop.addEventListener("mouseover", (event) => {
     arrow.style.color = "red";
 });
 
-bg.addEventListener("mouseout", (event) => {
+gotop.addEventListener("mouseout", (event) => {
     arrow.style.color = "white";
 });
